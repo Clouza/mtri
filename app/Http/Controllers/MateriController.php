@@ -12,16 +12,16 @@ class MateriController extends Controller
      */
     public function index(Request $request)
     {
-        // Pencarian berdasarkan judul
+        // Ambil parameter pencarian
         $search = $request->input('search');
 
-        $materis = Materi::query()
-            ->when($search, function ($query, $search) {
-                $query->where('judul', 'like', "%{$search}%");
-            })
-            ->orderBy('id', 'desc')
-            ->get();
+        // Jika ada input pencarian, lakukan query
+        $materis = [];
+        if ($search) {
+            $materis = Materi::where('judul', 'like', "%{$search}%")->get();
+        }
 
+        // Kembalikan view dengan data pencarian & hasil
         return view('materi.index', compact('materis', 'search'));
     }
 
