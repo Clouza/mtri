@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('materis', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('pdf_url')->nullable(); // Link ke PDF
+            $table->string('pertanyaan');
+            $table->string('jawaban')->nullable(); // Link ke PDF
             $table->timestamps();
         });
     }
