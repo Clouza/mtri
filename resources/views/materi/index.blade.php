@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Daftar Pertanyaan Kejang Demam</title>
     @vite('resources/css/app.css') <!-- Bila pakai Vite & Tailwind -->
@@ -14,10 +15,12 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.4); /* background overlay */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* background overlay */
         }
     </style>
 </head>
+
 <body class="bg-gray-100">
     <nav class="p-4 bg-white shadow flex justify-between">
         <h1 class="text-xl font-bold">Aplikasi Kejang Demam (Q&A)</h1>
@@ -33,13 +36,8 @@
         <!-- Pencarian -->
         <form action="{{ route('materi.index') }}" method="GET" class="mb-4">
             <div class="flex">
-                <input
-                    type="text"
-                    name="search"
-                    placeholder="Cari pertanyaan..."
-                    value="{{ $search ?? '' }}"
-                    class="border border-gray-300 rounded-l px-3 py-2 w-full"
-                >
+                <input type="text" name="search" placeholder="Cari pertanyaan..." value="{{ $search ?? '' }}"
+                    class="border border-gray-300 rounded-l px-3 py-2 w-full">
                 <button class="bg-blue-600 text-white px-4 py-2 rounded-r">
                     Cari
                 </button>
@@ -49,8 +47,15 @@
         @if ($materis->count() > 0)
             <ul class="bg-white rounded shadow divide-y divide-gray-200">
                 @foreach ($materis as $materi)
+                    @php
+                        // Hindari SyntaxError karena newline. Ganti \n -> \n yang di-escape (\\n).
+                        // Sekaligus tambahkan addslashes untuk karakter kutip dsb.
+                        $escapedJawaban = str_replace(["\r\n", "\n", "\r"], '\\n', addslashes($materi->jawaban));
+                        $escapedPertanyaan = str_replace(["\r\n", "\n", "\r"], '\\n', addslashes($materi->pertanyaan));
+                    @endphp
+
                     <li class="p-4 hover:bg-gray-50 cursor-pointer"
-                        onclick="openModal('{{ $materi->pertanyaan }}', '{{ str_replace(["\r\n", "\r", "\n"], '\\n', $materi->jawaban) }}')">
+                        onclick="openModal('{{ $escapedPertanyaan }}', '{{ $escapedJawaban }}')">
                         {{ $materi->pertanyaan }}
                     </li>
                 @endforeach
@@ -62,12 +67,10 @@
         @endif
     </div>
 
-    <!-- Modal -->
+    <!-- Modal (hanya satu) -->
     <div id="myModal" class="modal flex items-center justify-center">
         <div class="bg-white w-full max-w-md p-6 rounded shadow relative">
-            <button
-                class="absolute top-2 right-2 text-gray-600 hover:cursor-pointer"
-                onclick="closeModal()">
+            <button class="absolute top-2 right-2 text-gray-600 hover:cursor-pointer" onclick="closeModal()">
                 ✕
             </button>
             <h2 id="modalQuestion" class="text-lg font-semibold mb-2"></h2>
@@ -76,13 +79,19 @@
     </div>
 
     <script>
-        const modal      = document.getElementById('myModal');
-        const modalQ     = document.getElementById('modalQuestion');
-        const modalA     = document.getElementById('modalAnswer');
+        const modal = document.getElementById('myModal');
+        const modalQ = document.getElementById('modalQuestion');
+        const modalA = document.getElementById('modalAnswer');
 
         function openModal(question, answer) {
-            modalQ.textContent = question;
-            modalA.textContent = answer.replace(/\\n/g, '<br>');
+            // Tampilkan pertanyaan apa adanya
+            modalQ.textContent = question.replace(/\\n/g, '\n');
+
+            // Ubah \n menjadi <br> agar multiline
+            // Kita ganti \\n -> <br>
+            const htmlAnswer = answer.replace(/\\n/g, '<br>');
+            modalA.innerHTML = htmlAnswer;
+
             modal.style.display = 'flex'; // Tampilkan modal
         }
 
@@ -90,7 +99,7 @@
             modal.style.display = 'none'; // Sembunyikan modal
         }
 
-        // Jika user klik di luar box konten, tutup modal
+        // Jika user klik area overlay di luar box, tutup modal
         window.addEventListener('click', function(e) {
             if (e.target === modal) {
                 closeModal();
@@ -98,4 +107,5 @@
         });
     </script>
 </body>
+
 </html>
