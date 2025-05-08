@@ -14,94 +14,79 @@ class MateriSeeder extends Seeder
     public function run(): void
     {
         Materi::create([
-            'pertanyaan' => 'Apa yang dimaksud dengan kejang demam?',
-            'jawaban' => "Kejang demam adalah bangkitan kejang yang terjadi saat suhu tubuh anak meningkat (di atas 38ºC), biasanya akibat infeksi, tanpa adanya gangguan pada otak. Umumnya terjadi pada anak usia 6 bulan hingga 5 tahun. Sekitar 3% anak di bawah usia 5 tahun pernah mengalaminya."
+            'pertanyaan' => 'Demam tinggi dapat menyebabkan kejang pada anak.',
+            'jawaban' => "Kejang demam biasanya terjadi ketika suhu tubuh anak naik secara cepat dan dapat menyebabkan demam, kejang ini umumnya terjadi pada anak usia 6 bulan hingga 5 tahun, dan paling sering muncul saat suhu tubuh melebihi 38°C. Anak yang memiliki riwayat keluarga dengan kejang demam juga cenderung lebih rentan mengalaminya. Jadi, demam tinggi memang bisa menjadi pemicu kejang demam."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Anak usia berapa saja yang rentan mengalami kejang demam?',
-            'jawaban' => "Kejang demam paling sering terjadi pada anak usia 6 bulan hingga 5 tahun. Beberapa definisi dari organisasi medis menyebut usia mulai dari 1 bulan hingga 5 tahun."
+            'pertanyaan' => 'Kejang demam paling sering terjadi pada bayi dan balita, namun pada kasus yang sangat jarang, kejang juga dapat terjadi di luar rentang usia tersebut.',
+            'jawaban' => "Kondisi ini lebih umum dialami oleh anak-anak usia 6 bulan hingga 5 tahun karena perkembangan sistem saraf mereka yang masih belum matang, tetapi tidak sepenuhnya menutup kemungkinan kejang demam terjadi pada usia lebih tua atau lebih muda, tergantung pada faktor risiko individu."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Apa penyebab kejang demam?',
-            'jawaban' => "Penyebabnya multifaktorial, meliputi:<br/>
-                        - Infeksi virus (90% kasus), seperti Rotavirus, Parainfluenza, dll.<br/>
-                        - Infeksi saluran pernapasan atas, otitis media, roseola, infeksi saluran kemih, saluran cerna.<br/>
-                        - Respon otak yang belum matang terhadap demam.<br/>
-                        - Faktor genetik dan lingkungan."
+            'pertanyaan' => 'Serangan kejang dapat terjadi lebih dari satu kali selama anak mengalami demam.',
+            'jawaban' => "Hal ini tergantung pada penyebab demam dan respons tubuh anak terhadap kenaikan suhu."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Bagaimana kejang demam bisa terjadi pada anak?',
-            'jawaban' => "Demam menyebabkan peningkatan metabolisme dan kebutuhan oksigen otak. Suhu tinggi dapat menyebabkan pelepasan muatan listrik abnormal di otak akibat gangguan keseimbangan ion sel saraf. Hal ini memicu kejang. Ambang kejang tiap anak berbeda, ada yang kejang di suhu 38ºC, ada yang baru kejang di atas 40ºC."
+            'pertanyaan' => 'Anak yang mengalami kejang demam sebaiknya segera dibawa ke rumah sakit untuk mendapatkan penanganan yang tepat.',
+            'jawaban' => "Meskipun sebagian besar kejang demam bersifat ringan dan berhenti dengan sendirinya, pemeriksaan medis penting untuk memastikan tidak ada penyebab lain yang lebih serius dan untuk mencegah komplikasi.Kejang demam bisa dicegah agar tidak kambuh kembali. Pencegahan dapat dilakukan dengan pemantauan suhu tubuh dan pemberian obat penurun panas secara tepat."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Apa tanda-tanda anak mengalami kejang demam?',
-            'jawaban' => "- Suhu tubuh tinggi (bisa mencapai 39°C).<br/>
-                        - Wajah pucat atau kebiruan.<br/>
-                        - Mata melirik atau berputar.<br/>
-                        - Tubuh kaku atau kejang hebat.<br/>
-                        - Anak bisa kehilangan kesadaran.<br/>
-                        - Napas tersengal atau terganggu."
+            'pertanyaan' => 'Kejang demam dapat dicegah agar tidak kambuh kembali dengan pemantauan suhu tubuh secara rutin dan pemberian obat penurun panas saat anak mulai demam.',
+            'jawaban' => "Dalam beberapa kasus, dokter juga dapat meresepkan obat pencegah kejang jika anak memiliki riwayat kejang demam berulang. Pencegahan dini sangat penting untuk mengurangi risiko kekambuhan."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Apa yang harus dilakukan saat anak kejang demam?',
-            'jawaban' => "1. Tetap tenang.<br/>
-                        2. Longgarkan pakaian, terutama di leher.<br/>
-                        3. Miringkan tubuh anak untuk mencegah tersedak muntah.<br/>
-                        4. Jauhkan benda tajam atau keras dari sekitar anak.<br/>
-                        5. Jangan memasukkan apa pun ke mulut anak.<br/>
-                        6. Catat durasi dan jenis kejang.<br/>
-                        7. Jika kejang lebih dari 5 menit, segera bawa ke fasilitas kesehatan.<br/>
-                        8. Berikan diazepam rektal hanya jika sudah dianjurkan dokter dan kejang masih berlangsung >5 menit."
+            'pertanyaan' => 'Mengukur suhu tubuh anak saat demam sangat penting untuk mengantisipasi terjadinya kejang demam.',
+            'jawaban' => "Pengukuran yang akurat membantu dalam mengambil tindakan pencegahan lebih dini."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Apa yang harus dilakukan saat anak demam agar tidak kejang?',
-            'jawaban' => "- Berikan antipiretik (penurun panas) seperti paracetamol.<br/>
-                        - Kompres dengan air hangat di dahi, ketiak, dan lipatan paha.<br/>
-                        - Jangan membungkus anak dengan pakaian/sarung tebal.<br/>
-                        - Beri cairan cukup: air, susu, jus, teh, dll.<br/>
-                        - Jaga suhu ruangan tetap sejuk dan nyaman."
+            'pertanyaan' => 'Kejang demam biasanya timbul ketika suhu tubuh anak mencapai lebih dari 38°C.',
+            'jawaban' => "Maka dari itu, penting untuk mengukur suhu tubuh secara berkala saat anak demam."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Kapan saya harus membawa anak ke dokter?',
-            'jawaban' => "- Jika kejang berlangsung lebih dari 5 menit.<br/>
-                        - Jika anak mengalami kesulitan bernapas.<br/>
-                        - Jika kejang terjadi untuk pertama kali.<br/>
-                        - Jika anak sulit sadar setelah kejang.<br/>
-                        - Jika kejang berulang dalam waktu singkat."
+            'pertanyaan' => 'Mengukur suhu tubuh anak secara rutin saat demam sangat penting untuk mengantisipasi terjadinya kejang demam.',
+            'jawaban' => "Pemantauan suhu yang akurat membantu orang tua mengambil tindakan cepat, seperti memberikan obat penurun panas, sebelum suhu tubuh naik terlalu tinggi dan memicu kejang."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Apa saja hal yang tidak boleh dilakukan saat anak kejang?',
-            'jawaban' => "- Jangan panik atau berteriak.<br/>
-                        - Jangan memasukkan sendok/obat ke mulut saat kejang.<br/>
-                        - Jangan menahan tubuh anak agar berhenti kejang secara paksa.<br/>
-                        - Jangan memandikan dengan air dingin (bisa memicu menggigil)."
+            'pertanyaan' => 'Anak yang mengalami kejang demam mungkin perlu diberikan obat lain selain obat penurun panas, seperti obat anti kejang, tergantung pada kondisi dan anjuran dokter.',
+            'jawaban' => "Pemberian obat tambahan biasanya dipertimbangkan jika anak mengalami kejang yang berlangsung lama, berulang, atau memiliki riwayat kejang kompleks.Kejang demam merupakan kondisi serius yang harus mendapatkan penanganan segera."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Mengapa penting mengetahui penanganan kejang demam?',
-            'jawaban' => "Dengan pengetahuan yang benar:<br/>
-                        - Orang tua lebih siap menangani kejang.<br/>
-                        - Menghindari tindakan salah yang membahayakan.<br/>
-                        - Mampu membedakan kondisi darurat.<br/>
-                        - Mengurangi kecemasan dan panik.<br/>
-                        - Mencegah komplikasi jangka panjang."
+            'pertanyaan' => 'Kejang demam merupakan kondisi yang serius dan harus mendapatkan penanganan secepatnya untuk mencegah komplikasi lebih lanjut.',
+            'jawaban' => "Meskipun sebagian besar kejang demam bersifat ringan dan tidak berbahaya, penanganan yang cepat dan tepat tetap penting, terutama jika kejang berlangsung lama atau terjadi berulang."
         ]);
 
         Materi::create([
-            'pertanyaan' => 'Apakah ada cara modern untuk belajar tentang kejang demam?',
-            'jawaban' => "Ya! Chatbot edukatif bisa digunakan untuk:<br/>
-                        - Memberi panduan langkah-langkah pertolongan.<br/>
-                        - Memberikan pengingat minum obat.<br/>
-                        - Menjawab pertanyaan seputar kejang demam kapan pun.<br/>
-                        - Membantu orang tua merasa lebih percaya diri."
+            'pertanyaan' => 'Cara paling tepat untuk menilai apakah anak mengalami demam adalah dengan mengukur suhu tubuh menggunakan termometer.',
+            'jawaban' => "Meraba kening atau membandingkan suhu tubuh anak dengan orang lain, seperti ibunya, tidak memberikan hasil yang akurat dan sebaiknya tidak dijadikan acuan utama dalam menilai demam."
+        ]);
+
+        Materi::create([
+            'pertanyaan' => 'Tindakan yang tepat saat anak mengalami demam.',
+            'jawaban' => "Tindakan yang tepat adalah memberikan obat penurun panas, mengompres dengan air dingin, serta memastikan anak cukup minum air putih.
+Kombinasi langkah-langkah tersebut membantu menurunkan suhu tubuh dan menjaga anak tetap terhidrasi, sehingga dapat mencegah komplikasi seperti kejang demam."
+        ]);
+
+        Materi::create([
+            'pertanyaan' => 'Yang harus di lakukan ibu saat anak mengalami kejang demam.',
+            'jawaban' => "Saat anak mengalami kejang demam, tindakan yang tepat adalah memberikan obat anti kejang jika tersedia dan segera membawa anak ke rumah sakit atau dokter terdekat. Penanganan cepat sangat penting untuk memastikan kejang berhenti dan anak mendapatkan pemeriksaan medis lanjutan guna mencegah risiko berulang atau komplikasi."
+        ]);
+
+        Materi::create([
+            'pertanyaan' => 'Yang harus di lakukan ibu untuk mencegah kambuhnya kejang saat anak demam.',
+            'jawaban' => "Orang tua sebaiknya segera menurunkan panas tubuh anak dan mencari tahu penyebab demam tersebut. Pemberian obat anti kejang tidak selalu diperlukan dan hanya diberikan jika direkomendasikan oleh dokter, terutama pada kasus kejang berulang."
+        ]);
+
+        Materi::create([
+            'pertanyaan' => 'Yang harus ibu lakukan jika anak masih mengalami kejang meskipun sudah diberikan obat penurun panas dan obat anti kejang.',
+            'jawaban' => "Segera membawa anak ke rumah sakit atau dokter terdekat adalah langkah yang tepat, Menunggu kejang berhenti dengan sendirinya dapat berisiko, sehingga penanganan medis segera sangat penting untuk memastikan kondisi anak tidak memburuk."
         ]);
     }
 }
